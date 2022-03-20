@@ -1,4 +1,5 @@
 module.exports = {
+  prefix: 'rtu-',
   mode: 'jit',
   content: [
     './index.html',
