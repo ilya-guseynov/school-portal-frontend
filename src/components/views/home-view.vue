@@ -5,7 +5,8 @@ export default {
 </script>
 
 <template>
-  <div class="rtu-text-red-500">
-    Home View Component
+  <div>
+    <h1 class="rtu-text-3xl rtu-mb-5">Главнавя</h1>
+    <div>Контент</div>
   </div>
 </template>

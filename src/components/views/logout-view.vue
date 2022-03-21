@@ -13,6 +13,7 @@ export default {
 
 <template>
   <div>
-    Logout View Component {{ authenticated }}
+    <h1 class="rtu-text-3xl rtu-mb-5">Выйти</h1>
+    <div>Контент</div>
   </div>
 </template>

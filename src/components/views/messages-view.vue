@@ -6,6 +6,7 @@ export default {
 
 <template>
   <div>
-    Messages View Component
+    <h1 class="rtu-text-3xl rtu-mb-5">Сообщения</h1>
+    <div>Контент</div>
   </div>
 </template>

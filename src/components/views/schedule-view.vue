@@ -6,6 +6,7 @@ export default {
 
 <template>
   <div>
-    Schedule View Component
+    <h1 class="rtu-text-3xl rtu-mb-5">Расписание</h1>
+    <div>Контент</div>
   </div>
 </template>
