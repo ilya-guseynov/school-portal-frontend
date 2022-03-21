@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <main>
+  <main class="rtu-container rtu-mx-auto rtu-px-5">
     <router-view />
   </main>
 </template>

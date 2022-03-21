@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <header class="rtu-bg-green-900 rtu-text-white">
+  <header class="rtu-bg-green-900 rtu-text-white rtu-mb-5">
     <div class="rtu-container rtu-mx-auto rtu-px-[20px] rtu-flex rtu-justify-between rtu-items-center">
       <div class="rtu-font-semibold rtu-text-lg">Школа</div>
       <nav class="rtu-py-4">
