@@ -1,6 +1,6 @@
 <script>
-import TheHeader from './components/layout/the-header.vue'
-import TheMain from './components/layout/the-main.vue'
+import TheHeader from './layout/the-header.vue'
+import TheMain from './layout/the-main.vue'
 
 export default {
   name: 'App',

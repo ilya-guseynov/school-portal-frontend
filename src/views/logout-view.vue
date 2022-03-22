@@ -1,6 +1,6 @@
 <script>
 import { mapState } from 'pinia'
-import { authStore } from '../../stores/auth-store.js'
+import { authStore } from '../stores/auth-store.js'
 
 export default {
   name: 'LogoutView',

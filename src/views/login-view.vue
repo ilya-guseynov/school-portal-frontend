@@ -1,7 +1,7 @@
 <script>
 import { mapActions, mapState } from 'pinia'
 import axios from 'axios'
-import { authStore } from '../../stores/auth-store.js'
+import { authStore } from '../stores/auth-store.js'
 
 export default {
   name: 'LoginView',
