@@ -6,7 +6,7 @@ export default {
   name: 'TheHeader',
 
   computed: {
-    ...mapState(authStore, ['authenticated']),
+    ...mapState(authStore, ['isAuthenticated', 'currentUser']),
   },
 }
 </script>
@@ -26,12 +26,6 @@ export default {
           <li>
             <router-link
               class="rtu-block rtu-bg-green-700 rtu-p-3 rtu-rounded-md hover:rtu-bg-green-500 rtu-transition-colors rtu-duration-400"
-              to="/about"
-            >О проекте</router-link>
-          </li>
-          <li>
-            <router-link
-              class="rtu-block rtu-bg-green-700 rtu-p-3 rtu-rounded-md hover:rtu-bg-green-500 rtu-transition-colors rtu-duration-400"
               to="/schedule"
             >Расписание</router-link>
           </li>
@@ -41,29 +35,35 @@ export default {
               to="/classes"
             >Классы</router-link>
           </li>
-          <li v-if="authenticated">
-            <router-link
-              class="rtu-block rtu-bg-green-700 rtu-p-3 rtu-rounded-md hover:rtu-bg-green-500 rtu-transition-colors rtu-duration-400"
-              to="/profile"
-            >Личный кабинет</router-link>
-          </li>
           <li>
             <router-link
               class="rtu-block rtu-bg-green-700 rtu-p-3 rtu-rounded-md hover:rtu-bg-green-500 rtu-transition-colors rtu-duration-400"
               to="/messages"
             >Сообщения</router-link>
           </li>
-          <li v-if="authenticated">
-            <router-link
-              class="rtu-block rtu-bg-green-700 rtu-p-3 rtu-rounded-md hover:rtu-bg-green-500 rtu-transition-colors rtu-duration-400"
-              to="/logout"
-            >Выйти</router-link>
-          </li>
-          <li v-else>
+          <li v-if="!isAuthenticated">
             <router-link
               class="rtu-block rtu-bg-green-700 rtu-p-3 rtu-rounded-md hover:rtu-bg-green-500 rtu-transition-colors rtu-duration-400"
               to="/login"
             >Войти</router-link>
+          </li>
+          <li v-if="!isAuthenticated">
+            <router-link
+              class="rtu-block rtu-bg-green-700 rtu-p-3 rtu-rounded-md hover:rtu-bg-green-500 rtu-transition-colors rtu-duration-400"
+              to="/register"
+            >Регистрация</router-link>
+          </li>
+          <li v-if="isAuthenticated">
+            <router-link
+              class="rtu-block rtu-bg-green-700 rtu-p-3 rtu-rounded-md hover:rtu-bg-green-500 rtu-transition-colors rtu-duration-400"
+              to="/profile"
+            >{{ currentUser.firstName }} {{ currentUser.lastName }}</router-link>
+          </li>
+          <li v-if="isAuthenticated">
+            <router-link
+              class="rtu-block rtu-bg-green-700 rtu-p-3 rtu-rounded-md hover:rtu-bg-green-500 rtu-transition-colors rtu-duration-400"
+              to="/logout"
+            >Выйти</router-link>
           </li>
         </ul>
       </nav>
