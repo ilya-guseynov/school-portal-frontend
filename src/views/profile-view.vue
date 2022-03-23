@@ -2,11 +2,12 @@
 import { mapState } from 'pinia'
 import { authStore } from '../stores/auth-store.js'
 import AdminPanel from '../components/admin-panel.vue'
+import StudentPanel from '../components/student-panel.vue';
 
 export default {
   name: "ProfileView",
 
-  components: { AdminPanel },
+  components: { AdminPanel, StudentPanel },
 
   computed: {
     ...mapState(authStore, ["isAuthenticated", "currentUser"]),
@@ -41,6 +42,9 @@ export default {
         </div>
         <div v-if="currentUser.userType === 'administrator'">
           <AdminPanel />
+        </div>
+        <div v-else-if="currentUser.userType === 'student'">
+          <StudentPanel />
         </div>
       </div>
     </template>
